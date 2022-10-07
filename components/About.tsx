@@ -33,7 +33,7 @@ function About({}: Props) {
               width={400}
               height={400}
               alt="profile"
-              src="/about_new.png"
+              src="about_new.png"
               className="rounded-full"
             />
           </div>

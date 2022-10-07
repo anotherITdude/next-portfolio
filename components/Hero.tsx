@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
         width={150}
         height={150}
         alt="profile"
-        src="/profile.jpeg"
+        src="profile.jpeg"
       />
 
       <div className="z-20">
