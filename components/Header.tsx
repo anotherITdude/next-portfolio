@@ -6,7 +6,7 @@ type Props = {};
 
 const Header: React.FC = (props: Props) => {
   return (
-    <header className="sticky top-0 items-start flex p-5 mx-auto max-w-7xl justify-between z-20 xl:items-center">
+    <header className="sticky top-0 items-start flex p-3 md:p-5 mx-auto max-w-7xl justify-between z-20 xl:items-center">
       <motion.div
         initial={{ x: -200, opacity: 0, scale: 0.8 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}

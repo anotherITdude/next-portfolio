@@ -1,5 +1,5 @@
 import React from "react";
-import { Cursor, Typewriter, useTypewriter } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,12 +9,17 @@ type Props = {};
 
 const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
-    words: ["Hi, the name is Abhimanyu", "I am a frontend developer fuck yeah"],
+    words: [
+      "Hi, I am Abhimanyu Baidya",
+      "I love <javascript />",
+      "presently commited to React",
+    ],
     loop: true,
     delaySpeed: 2000,
+    deleteSpeed: 5,
   });
   return (
-    <motion.div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <motion.div className="h-screen flex flex-col md:space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <Image
         className="relative rounded-full h-32 w-32 object-cover mx-auto"
@@ -24,16 +29,16 @@ const Hero = (props: Props) => {
         src="profile.jpeg"
       />
 
-      <div className="z-20">
-        <h2 className="text- uppercase text-gray-500 pb-2 tracking-[15px]">
-          Frontend Engineer
+      <div className="z-20 ">
+        <h2 className="py-5 text-l uppercase text-gray-500 pb-2 tracking-[8px]  md:tracking-[15px]">
+          Frontend developer
         </h2>
-        <h1 className="text-4xl lg:text-5xl font-semibold px-10">
+        <h1 className="text-2xl md:text-5xl font-semibold px-10 h-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#ffffff" />
         </h1>
 
-        <div className="pt-5">
+        <div className="md:pt-6 ">
           <Link href="#about">
             <button className="hero__buttons">About</button>
           </Link>
