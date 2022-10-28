@@ -1,6 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
@@ -30,8 +31,8 @@ const Header: React.FC = (props: Props) => {
         <SocialIcon
           url="https://www.instagram.com/abhi.baidya/"
           fgColor="gray"
-          bgColor="transparent
-        "
+          bgColor="transparent"
+          className=""
         />
         <SocialIcon
           url="https://github.com/anotherITdude"
@@ -47,14 +48,11 @@ const Header: React.FC = (props: Props) => {
         transition={{ duration: 1.5 }}
         className="flex items-center flex-row text-gray-500 cursor-pointer"
       >
-        <SocialIcon
-          url="mailto:abhi.baidya@gmail.com"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
-          get in touch
-        </p>
+        <Link href="#contact">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
+            get in touch
+          </p>
+        </Link>
       </motion.div>
     </header>
   );

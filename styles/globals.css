@@ -8,4 +8,29 @@
     uppercase text-xs tracking-widest text-gray-500 
     transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40;
   }
+
+  .body__heading {
+    @apply absolute text-gray-500 text-2xl mb-20  z-20 w-screen text-center
+      top-[10%] uppercase tracking-[10px]
+      md:tracking-[30px] md:top-28;
+  }
+
+  .body__main {
+    @apply h-screen flex flex-col relative text-center max-w-7xl px-10
+      md:text-left md:flex-row  md:justify-between mx-auto items-center;
+  }
+
+  .about__image {
+    @apply mb-20 w-48 h-48 flex-shrink-0 pt-32
+    rounded-full object-cover flex
+    justify-center items-center
+    md:rounded-lg md:pt-0  md:mb-0 md:w-[300px] md:h-[300px] 
+    xl:w-[400px] xl:h-[400px];
+  }
+
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b 
+    px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all
+    focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40;
+  }
 }

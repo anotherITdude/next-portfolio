@@ -11,27 +11,10 @@ function About({}: Props) {
       transition={{ duration: 2 }}
       className="relative"
     >
-      <h3
-        className="absolute text-gray-500 text-2xl mb-20  z-20 w-screen text-center
-        top-[10%] uppercase tracking-[10px]
-        md:tracking-[30px] md:top-28
-       "
-      >
-        about
-      </h3>
-      <div
-        className="h-screen flex flex-col relative text-center max-w-7xl px-10
-        md:text-left md:flex-row  md:justify-between mx-auto items-center
-   "
-      >
-        <div className="left mt-14 md:mt-10">
-          <div
-            className="mb-20 w-48 h-48 flex-shrink-0 pt-32
-          rounded-full object-cover flex
-          justify-center items-center
-          md:rounded-lg md:pt-0  md:mb-0 md:w-[300px] md:h-[300px] 
-          xl:w-[400px] xl:h-[400px]  "
-          >
+      <h3 className="body__heading">about</h3>
+      <div className="body__main">
+        <div className="left mt-[5.5rem] sm:mt-32 md:mt-0">
+          <div className="about__image">
             <Image
               width={400}
               height={400}
