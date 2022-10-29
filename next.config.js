@@ -8,4 +8,6 @@ const nextConfig = {
   },
 }
 
+console.log("nextjs")
+
 module.exports = nextConfig

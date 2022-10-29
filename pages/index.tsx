@@ -8,6 +8,9 @@ import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 
+import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
+
 const Home: NextPage = () => {
   return (
     <div
@@ -23,31 +26,30 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Header />
-
       <section id="hero" className="snap-end">
         <Hero />
       </section>
-
       <section id="about" className="snap-center">
         <About />
       </section>
-
       <section id="experience" className="snap-center">
         <Experience />
       </section>
-
       <section id="skills" className="snap-center">
         <Skills />
       </section>
-
       <section id="projects" className="snap-center">
         <Projects />
       </section>
-
       <section id="contact" className="snap-center">
         <Contact />
+      </section>
+
+      <section className="absolute bottom-2  w-full">
+        <Link href="#hero">
+          <ArrowUpCircleIcon className="h-8 w-8 mx-auto cursor-pointer z-50 text-gray-500" />
+        </Link>
       </section>
     </div>
   );

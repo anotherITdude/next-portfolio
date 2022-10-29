@@ -16,10 +16,13 @@ type Inputs = {
 function Contact({}: Props) {
   const form = useRef<HTMLFormElement | any>();
   const [success, setSuccess] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+
   const removeMessage = () => {
+    setLoading(false);
     setTimeout(() => {
       setSuccess(false);
-    }, 5000);
+    }, 6000);
   };
   const {
     register,
@@ -29,9 +32,8 @@ function Contact({}: Props) {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     const { name, email, message } = formData;
-    const testData = formData.toString();
-    console.log(name, email, message);
     setSuccess(false);
+    setLoading(true);
     emailjs
       .sendForm(
         "service_gkim0oq",
@@ -127,8 +129,11 @@ function Contact({}: Props) {
                 Message field is required
               </span>
             )}
-            <button className="bg-[#F7AB0A] py-5 px-10 rounded text-black font-bold">
-              Submit
+            <button
+              disabled={loading ? true : false}
+              className="bg-[#F7AB0A] py-5 px-10 rounded text-black font-bold"
+            >
+              {loading ? "Sending message..." : "Submit"}
             </button>
           </form>
         </div>

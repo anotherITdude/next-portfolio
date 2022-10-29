@@ -2,6 +2,7 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 type Props = {};
 
@@ -49,9 +50,7 @@ const Header: React.FC = (props: Props) => {
         className="flex items-center flex-row text-gray-500 cursor-pointer"
       >
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-500">
-            get in touch
-          </p>
+          <EnvelopeIcon className="text-gray-500 h-7 w-7 cursor-pointer" />
         </Link>
       </motion.div>
     </header>
